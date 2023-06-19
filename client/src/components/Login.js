@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useInput from "../hooks/use-input";
 import axios from "axios";
@@ -72,8 +72,8 @@ const Login = () => {
           {passwordInputHasError && <p className="error-text">Incorrect password</p>}
         </div>
         <div className="form-actions">
-          <Link to="/registration" className="button">Sign up</Link>
-          <button className="button">Submit</button>
+          <button className="button">Sign in</button>
+          <Link to="/registration" className="button">Register</Link>
         </div>
       </form>
     </React.Fragment>

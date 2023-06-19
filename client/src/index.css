@@ -16,16 +16,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   padding: 1rem;
-  /* margin: 3rem auto; */
 }
 
 .form-control {
   margin-bottom: 1rem;
+  max-width: 300px;
 }
 
 .form-control input,
 .form-control label {
+  max-width: 400px;
   display: block;
 }
 
@@ -79,7 +81,7 @@ button:active {
 
 
 .form-actions button {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .invalid input {

@@ -28,12 +28,12 @@ const MainPage = () => {
     }, [userId]);
 
     return (
-        <>
+        <div className="app">
             <h1>Info</h1>
             <p>Your username is: {username}</p>
             <p>Your email is: {email}</p>
             <button onClick={logout}>Logout</button>
-        </>
+        </div>
     );
 };
 

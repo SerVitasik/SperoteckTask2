@@ -86,16 +86,16 @@ const Registration = () => {
         <div className={emailInputClasses}>
           <label htmlFor='email'>Your email</label>
           <input type='text' onBlur={emailBlurHandler} id='email' onChange={emailChangeHandler} value={enteredEmail} />
-          {emailInputHasError && <p className="error-text">Email must not be empty</p>}
+          {emailInputHasError && <p className="error-text">Invalid email</p>}
         </div>
         <div className={passwordInputClasses}>
           <label htmlFor='password'>Password</label>
           <input type='password' onBlur={passwordBlurHandler} id='password' onChange={passwordChangeHandler} value={enteredPassword} />
-          {passwordInputHasError && <p className="error-text">Password must not be empty</p>}
+          {passwordInputHasError && <p className="error-text">The password must match the following pronunciations (minimum 8 characters, including at least one uppercase letter, one lowercase letter and one number)</p>}
         </div>
         <div className="form-actions">
-          <Link to="/login" Link className="button">Sign in</Link>
-          <button className="button" disabled={!formIsValid}>Submit</button>
+          <button className="button" disabled={!formIsValid}>Sign up</button>
+          <Link to="/login" Link className="button">Already have an account?</Link>
         </div>
       </form>
     </React.Fragment>
