@@ -18,7 +18,6 @@ const useRoutes = (isLogin) => {
             <Route path='/login' exact element={<Login />} />
             <Route path='/registration' element={<Registration />} />
             <Route path="*" element={<Navigate to="/login" replace />} />
-
         </Routes>
     );
 };
