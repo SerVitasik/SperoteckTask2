@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json({ extended: true }));
 app.use('/api/auth', require('./routes/auth.route'));
-app.use('/api/info', require('./routes/info.route.js'));
 
 async function start() {
     try {
