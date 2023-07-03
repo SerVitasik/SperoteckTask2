@@ -1,19 +1,20 @@
-Executable:
-
+#### Executable:
+```bash
 npm run dev
+```
+
+#### Stack:
+* React
+* SCSS
+* NodeJS
+* Express
 
 
-Stack:
-
-React
-SCSS
-NodeJS
-Express
-
-
-Installation of requirements:
-
+#### Installation of requirements:
+```bash
 npm install
+```
+#### Developer:
 
-Developer:
-Vitalii Kulyk vitaliy.kulik2332@gmail.com
+Vitalii Kulyk 
+`vitaliy.kulik2332@gmail.com`
