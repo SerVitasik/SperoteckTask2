@@ -5,7 +5,7 @@ import useAuth from './hooks/use-auth';
 
 function App() {
   const { login, logout, userId, token, isReady } = useAuth();
-  const isLogin = token ? true : false;
+  const isLogin = !!token;
   const routes = useRoutes(isLogin);
 
   return (

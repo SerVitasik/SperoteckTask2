@@ -3,6 +3,7 @@ const User = require('../models/User');
 const { check, validationResult } = require('express-validator');
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { jwtSecret } = require('../config')
 const router = Router();
 
 router.post('/registration',
@@ -30,7 +31,7 @@ router.post('/registration',
             }
 
             const hashedPassword = await bcrypt.hash(password, 12);
-
+            console.log(hashedPassword);
             const user = new User({
                 username,
                 email,
@@ -65,19 +66,21 @@ router.post('/login',
                 return res.status(400).json({ message: "User not found" });
             }
 
-            const isCorrectPassword = bcrypt.compare(password, user.password)
-
+            const isCorrectPassword = await bcrypt.compare(password, user.password);
+            console.log(password)
+            console.log(user.password);
+            console.log(isCorrectPassword);
             if (!isCorrectPassword) {
-                return res.status(400).json({ message: "Incorrect password" });
+                return res.status(401).json({ message: "Incorrect password" });
             }
-
-            const jwtSecret = 'vitasiks123';
 
             const token = jwt.sign(
                 { userId: user.id },
                 jwtSecret,
                 { expiresIn: '1h' }
             );
+
+
 
             res.json({ token, userId: user.id });
 
