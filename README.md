@@ -1,6 +1,10 @@
 Executable:
+
 npm run dev
+
+
 Stack:
+
 React
 SCSS
 NodeJS
